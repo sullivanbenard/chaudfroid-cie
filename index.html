@@ -227,33 +227,109 @@
     .cards{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:20px;
+      gap:24px;
     }
     .card{
-      border:1px solid var(--line);
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(0,113,188,.14);
       border-radius:var(--radius);
-      background:white;
-      box-shadow:0 10px 28px rgba(7,17,31,.06);
-      padding:24px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
+        radial-gradient(circle at 18% 0,rgba(0,113,188,.14),transparent 34%);
+      box-shadow:0 18px 42px rgba(7,17,31,.08);
+      padding:28px;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto;
+      height:4px;
+      background:linear-gradient(90deg,var(--blue),var(--orange));
+    }
+    .card::after{
+      content:"";
+      position:absolute;
+      right:-44px;
+      top:-44px;
+      width:132px;
+      height:132px;
+      border-radius:999px;
+      background:rgba(0,113,188,.07);
+      pointer-events:none;
+    }
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(0,113,188,.28);
+      box-shadow:0 24px 56px rgba(7,17,31,.13);
+    }
+    .card.cold{
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
+        radial-gradient(circle at 18% 0,rgba(0,162,255,.18),transparent 34%);
+    }
+    .card.climate{
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
+        radial-gradient(circle at 18% 0,rgba(52,199,133,.16),transparent 34%);
+    }
+    .card.kitchen{
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
+        radial-gradient(circle at 18% 0,rgba(255,138,52,.18),transparent 34%);
     }
     .icon{
-      width:52px;
-      height:52px;
+      position:relative;
+      width:68px;
+      height:68px;
       display:flex;
       align-items:center;
       justify-content:center;
-      margin-bottom:14px;
-      border-radius:16px;
-      background:var(--light);
-      font-size:26px;
+      margin-bottom:18px;
+      border:1px solid rgba(255,255,255,.68);
+      border-radius:20px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,255,255,.58)),
+        linear-gradient(135deg,rgba(0,113,188,.13),rgba(255,138,52,.12));
+      box-shadow:0 12px 28px rgba(7,17,31,.08), inset 0 1px 0 rgba(255,255,255,.9);
+      color:var(--blue);
+    }
+    .icon svg{
+      width:38px;
+      height:38px;
+      display:block;
+      stroke:currentColor;
+      stroke-width:2.2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      fill:none;
+    }
+    .card.cold .icon{color:#008fe3}
+    .card.climate .icon{color:#168b65}
+    .card.kitchen .icon{color:#ef7926}
+    .card.kitchen .icon svg .filled{fill:currentColor;stroke:none}
+    .card.cold::before{background:linear-gradient(90deg,#008fe3,#63d7ff)}
+    .card.climate::before{background:linear-gradient(90deg,#168b65,#8be0b7)}
+    .card.kitchen::before{background:linear-gradient(90deg,#ef7926,#ffc05c)}
+    .card.cold::after{background:rgba(0,143,227,.08)}
+    .card.climate::after{background:rgba(22,139,101,.08)}
+    .card.kitchen::after{background:rgba(239,121,38,.09)}
+    .card > *{
+      position:relative;
+      z-index:1;
     }
     .card h3{
       margin:0 0 10px;
       color:var(--dark);
-      font-size:1.25rem;
+      font-size:1.32rem;
       line-height:1.25;
     }
-    .card p{margin:0;color:var(--muted)}
+    .card p{
+      margin:0;
+      color:#4f647b;
+      font-size:1.02rem;
+    }
     .band{background:var(--light)}
     .split{
       display:grid;
@@ -471,18 +547,38 @@
           <h2>Nos domaines d'intervention</h2>
         </div>
         <div class="cards">
-          <article class="card">
-            <div class="icon" aria-hidden="true">❄</div>
+          <article class="card cold">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M24 6v36M10 14l28 20M38 14 10 34"/>
+                <path d="m18 9 6 6 6-6M18 39l6-6 6 6M7 24h34"/>
+                <path d="m11 18 8 2-2-8M37 30l-8-2 2 8M37 18l-8 2 2-8M11 30l8-2-2 8"/>
+              </svg>
+            </div>
             <h3>Froid commercial</h3>
             <p>Chambres froides<br>Vitrines réfrigérées<br>Armoires positives et négatives<br>Machines à glace (Taylor, Carpigiani)<br>Refroidisseurs<br>Équipements frigorifiques divers</p>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">◆</div>
+          <article class="card climate">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M9 20c5-5 12-5 17 0 4 4 9 4 13 0"/>
+                <path d="M7 29c6-4 12-4 18 0 5 3 10 3 16-1"/>
+                <path d="M30 8h8v8M38 8 27 19"/>
+                <path d="M12 39h9M16.5 34.5v9"/>
+              </svg>
+            </div>
             <h3>Climatisation & pompe à chaleur</h3>
             <p>Installation et mise en service<br>Pompes à chaleur air/eau<br>Climatisation air/air<br>Entretien & maintenance périodique<br>Dépannage et réparation<br>Désembouage de réseaux hydrauliques</p>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">✓</div>
+          <article class="card kitchen">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M14 41V19M14 19c-5-3-5-10 0-12 4-2 7 1 8 4 1-3 4-6 8-4 5 2 5 9 0 12v22"/>
+                <path d="M14 20h16"/>
+                <path d="M36 8v33M40 8v12c0 3-2 5-4 5s-4-2-4-5V8"/>
+                <path class="filled" d="M19 28h6v6h-6z"/>
+              </svg>
+            </div>
             <h3>Cuisines professionnelles</h3>
             <p>Fours professionnels<br>Friteuses<br>Grills et plaques de cuisson<br>Pianos de cuisson<br>Lave-vaisselles professionnels<br>Équipements CHR</p>
           </article>
