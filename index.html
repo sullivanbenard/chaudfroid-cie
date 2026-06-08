@@ -3,134 +3,522 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ChaudFroid & Cie | Froid commercial, Climatisation & Cuisines Professionnelles dans la Manche</title>
-  <meta name="description" content="ChaudFroid & Cie intervient dans la Manche pour le dépannage, l’installation et la maintenance en froid commercial, climatisation, pompe à chaleur et équipements de cuisine professionnelle.">
+  <title>ChaudFroid & Cie | Froid commercial, climatisation et cuisines professionnelles</title>
+  <meta name="description" content="ChaudFroid & Cie intervient dans la Manche pour le depannage, l'installation et la maintenance en froid commercial, climatisation, pompe a chaleur et equipements de cuisine professionnelle.">
   <style>
-    :root{--blue:#0071bc;--orange:#ff8a34;--red:#ff4d45;--dark:#07111f;--text:#1c2836;--muted:#617083;--light:#f4f8fb;--white:#fff;--shadow:0 18px 45px rgba(7,17,31,.12);--radius:22px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:10;background:#000;border-bottom:1px solid rgba(255,255,255,.15);}.nav{display:flex;align-items:center;justify-content:space-between;padding:4px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark)}.brand img{width:150px;height:150px;object-fit:contain}.brand span{font-size:1.15rem}.menu{display:flex;gap:22px;align-items:center;font-weight:700;font-size:.95rem;color:#344255}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:800;background:linear-gradient(135deg,var(--blue),#00a2ff);color:white;box-shadow:0 10px 25px rgba(0,113,188,.25)}.btn.orange{background:linear-gradient(135deg,var(--orange),#ffba62);box-shadow:0 10px 25px rgba(255,138,52,.25);color:#1a120a}
-    .hero{position:relative;overflow:hidden;min-height:70vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.55)),url("fond-accueil.png.png");background-size:cover;background-position:center center;background-repeat:no-repeat;color:white;padding:60px 0;}
-    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-weight:700;color:#eaf6ff}h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.05;margin:18px 0}.lead{font-size:1.18rem;color:#d9e8f5;max-width:720px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-align:center}.hero-card img{width:min(420px,100%);display:block;margin:auto}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.quick div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:14px;font-weight:800}
-    section{padding:48px 0}.section-title{text-align:center;max-width:820px;margin:0 auto 38px}h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.15;margin:0 0 12px;color:var(--dark)}.section-title p{color:var(--muted);font-size:1.06rem}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid #e7edf3;border-radius:var(--radius);padding:24px;box-shadow:0 10px 28px rgba(7,17,31,.06)}.icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px;background:var(--light)}.card h3{margin:0 0 10px;font-size:1.25rem;color:var(--dark)}.card p{margin:0;color:var(--muted)}.band{background:var(--light)}.split{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}.list{display:grid;gap:12px;margin-top:18px}.list span{display:flex;gap:10px;align-items:flex-start;background:white;padding:13px 15px;border-radius:14px;border:1px solid #e7edf3}.list b{color:var(--blue)}.zone{background:linear-gradient(135deg,rgba(0,113,188,.08),rgba(255,138,52,.12));border-radius:var(--radius);padding:30px;border:1px solid #e7edf3}.cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;justify-content:center}.cities span{padding:9px 13px;border-radius:999px;background:white;border:1px solid #e7edf3;font-weight:700}.contact{background:linear-gradient(135deg,#07111f,#132842);color:white;border-radius:30px;padding:38px;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}.contact h2{color:white}.contact p{color:#d9e8f5}.contact-box{background:white;color:var(--text);border-radius:22px;padding:24px}.contact-box a{display:block;margin:10px 0;color:var(--blue);font-weight:900}footer{padding:32px 0;background:#050b14;color:#aab7c7;text-align:center}footer b{color:white}@media(max-width:850px){.menu{display:none}.hero-grid,.split,.contact{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.quick{grid-template-columns:1fr}.hero{padding:48px 0}@media(max-width:850px){
-  .brand img{
-    width:90px;
-    height:auto;
-  }
-}
-  @media(max-width:850px){
+    :root{
+      --blue:#0071bc;
+      --blue-dark:#07558c;
+      --orange:#ff8a34;
+      --dark:#07111f;
+      --text:#1c2836;
+      --muted:#617083;
+      --line:#e4ebf2;
+      --light:#f4f8fb;
+      --white:#fff;
+      --shadow:0 18px 45px rgba(7,17,31,.12);
+      --radius:18px;
+    }
 
-.hero{
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.55)),url("accueilmobile.png");
-background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
-}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
 
-@media(max-width:850px){
-  .menu{display:none}
-  .hero-grid,.split,.contact{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
-  .quick{grid-template-columns:1fr}
-  .hero{
-    padding:48px 0;
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.55)),url("accueilmobile.png");
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-  }
-  .brand img{
-    width:90px;
-    height:auto;
-  }
-  .hero-card{
-    display:none;
-  }
-}
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:#000;
+      border-bottom:1px solid rgba(255,255,255,.15);
+    }
+    .nav{
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:8px 0;
+    }
+    .brand{display:flex;align-items:center;flex:0 0 auto}
+    .brand img{
+      width:96px;
+      height:70px;
+      object-fit:contain;
+      display:block;
+    }
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      color:#eaf3fb;
+      font-size:.95rem;
+      font-weight:700;
+    }
+    .menu a:not(.btn){opacity:.9}
+    .menu a:not(.btn):hover{opacity:1}
 
-#marques{
-  padding:0 0 25px 0;
-  margin-top:-25px;
-}
+    .btn{
+      min-height:44px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--blue),#00a2ff);
+      color:white;
+      box-shadow:0 10px 25px rgba(0,113,188,.25);
+      font-weight:800;
+      text-align:center;
+      line-height:1.2;
+    }
+    .btn.orange{
+      background:linear-gradient(135deg,var(--orange),#ffba62);
+      box-shadow:0 10px 25px rgba(255,138,52,.25);
+      color:#1a120a;
+    }
+    .btn:focus-visible,
+    a:focus-visible{
+      outline:3px solid rgba(255,138,52,.65);
+      outline-offset:3px;
+    }
 
-.brands-banner{
-  text-align:center;
-}
+    .hero{
+      min-height:calc(100svh - 86px);
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,.56)),
+        url("fond-accueil.png.png") center/cover no-repeat;
+      color:white;
+      padding:64px 0;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.06fr) minmax(280px,.94fr);
+      gap:44px;
+      align-items:center;
+    }
+    h1{
+      max-width:760px;
+      margin:0;
+      font-size:clamp(2.35rem,4.8vw,4.25rem);
+      line-height:1.05;
+      letter-spacing:0;
+    }
+    .lead{
+      max-width:720px;
+      margin:20px 0 0;
+      color:#d9e8f5;
+      font-size:1.18rem;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+    .hero-card{
+      padding:24px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .hero-card img{
+      width:min(390px,100%);
+      display:block;
+      margin:auto;
+    }
+    .quick{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:28px;
+    }
+    .quick div{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:16px;
+      background:rgba(255,255,255,.1);
+      padding:14px;
+      font-weight:800;
+      line-height:1.3;
+    }
 
-.brands-banner img{
-  width:75%;
-  max-width:900px;
-  height:auto;
-  display:block;
-  margin:auto;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
+    section{padding:56px 0}
+    .section-title{
+      max-width:820px;
+      margin:0 auto 34px;
+      text-align:center;
+    }
+    h2{
+      margin:0 0 12px;
+      color:var(--dark);
+      font-size:clamp(1.8rem,3vw,2.65rem);
+      line-height:1.15;
+      letter-spacing:0;
+    }
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.06rem;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:white;
+      box-shadow:0 10px 28px rgba(7,17,31,.06);
+      padding:24px;
+    }
+    .icon{
+      width:52px;
+      height:52px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:14px;
+      border-radius:16px;
+      background:var(--light);
+      font-size:26px;
+    }
+    .card h3{
+      margin:0 0 10px;
+      color:var(--dark);
+      font-size:1.25rem;
+      line-height:1.25;
+    }
+    .card p{margin:0;color:var(--muted)}
+    .band{background:var(--light)}
+    .split{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:28px;
+      align-items:center;
+    }
+    .split p{margin-top:0}
+    .list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+    .list span{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:white;
+      padding:13px 15px;
+    }
+    .list b{color:var(--blue)}
+    .zone-card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(135deg,rgba(0,113,188,.08),rgba(255,138,52,.12));
+      padding:30px;
+    }
+    .cities{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+    }
+    .cities span{
+      padding:9px 13px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:white;
+      font-weight:700;
+    }
+    #marques{padding:16px 0 42px}
+    .brands-banner{text-align:center}
+    .brands-banner img{
+      width:min(900px,82%);
+      display:block;
+      margin:auto;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
 
-.contact-logo{
-  width:100px !important;
-  max-width:100px !important;
-  height:auto !important;
-  display:block;
-  margin:0 auto 20px auto;
-}
+    .contact{
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+      gap:28px;
+      align-items:center;
+      border-radius:24px;
+      background:linear-gradient(135deg,#07111f,#132842);
+      color:white;
+      padding:38px;
+    }
+    .contact h2{color:white}
+    .contact p{color:#d9e8f5}
+    .contact-box{
+      border-radius:18px;
+      background:white;
+      color:var(--text);
+      padding:24px;
+      text-align:center;
+    }
+    .contact-logo{
+      width:100px;
+      max-width:100px;
+      display:block;
+      margin:0 auto 20px;
+    }
+    .contact-box a{
+      display:block;
+      margin:10px 0;
+      color:var(--blue-dark);
+      font-weight:900;
+      overflow-wrap:anywhere;
+    }
+    .contact .legal{
+      margin:16px 0 0;
+      color:#4d5c6d;
+      font-size:.92rem;
+    }
+    footer{
+      padding:32px 0;
+      background:#050b14;
+      color:#aab7c7;
+      text-align:center;
+    }
+    footer b{color:white}
 
-@media(max-width:850px){
-  #marques{
-    margin-top:0;
-    padding:10px 0 25px 0;
-  }
+    @media (min-width:851px){
+      .contact-logo{
+        width:72px;
+        max-width:72px;
+      }
+    }
 
-  .brands-banner img{
-    width:100%;
-  }
-}@media(min-width:851px){
-  .contact-box img.contact-logo{
-    width:70px !important;
-    max-width:70px !important;
-    height:auto !important;
-  }
-}</style>
+    @media (max-width:980px){
+      .menu{gap:14px;font-size:.9rem}
+      .hero-grid{grid-template-columns:1fr .75fr;gap:28px}
+      .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .card:last-child{grid-column:1 / -1}
+    }
+
+    @media (max-width:850px){
+      .container{width:min(100% - 32px,680px)}
+      .nav{
+        min-height:76px;
+        gap:12px;
+      }
+      .brand img{
+        width:82px;
+        height:60px;
+      }
+      .menu{display:none}
+      .nav > .btn{
+        max-width:calc(100% - 100px);
+        padding:10px 14px;
+        font-size:.86rem;
+      }
+      .hero{
+        min-height:auto;
+        background:
+          linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,.56)),
+          url("accueilmobile.png") center/cover no-repeat;
+        padding:46px 0 42px;
+      }
+      .hero-grid,
+      .split,
+      .contact{
+        grid-template-columns:1fr;
+      }
+      .hero-card{display:none}
+      h1{font-size:clamp(2.05rem,9vw,3.1rem)}
+      .lead{font-size:1.05rem}
+      .hero-actions{display:grid;grid-template-columns:1fr}
+      .btn{width:100%}
+      .quick{grid-template-columns:1fr;gap:10px}
+      .quick div{min-height:0}
+      section{padding:42px 0}
+      .cards{grid-template-columns:1fr}
+      .card:last-child{grid-column:auto}
+      .card,.zone-card{padding:20px}
+      #marques{padding:6px 0 34px}
+      .brands-banner img{width:100%;border-radius:12px}
+      .contact{
+        border-radius:20px;
+        padding:24px;
+      }
+      .contact-box{padding:22px 18px}
+      footer{text-align:left}
+    }
+
+    @media (max-width:420px){
+      .container{width:min(100% - 24px,680px)}
+      .nav > .btn{font-size:.8rem;padding:10px 12px}
+      .contact{padding:20px}
+      .cities{justify-content:flex-start}
+    }
+  </style>
 </head>
 <body>
-  <header><div class="container nav"><a class="brand" href="#accueil"><img src="logo-chaudfroid-cie.png" alt="Logo ChaudFroid & Cie"><a class="btn orange" href="tel:+33616056614">📞 URGENCE DÉPANNAGE 7/7j</a></a><nav class="menu"><a href="#services">Services</a><a href="#interventions">Interventions</a><a href="#zone">Secteurs</a><a class="btn" href="tel:+33616056614">Appeler</a></nav></div></header>
-  <main id="accueil">
-    <section class="hero"><div class="container hero-grid"><div><h1>Votre spécialiste du froid, de la climatisation et des cuisines professionnelles dans la Manche</h1><p class="lead">Nous accompagnons les professionnels, collectivités et particuliers pour le dépannage, l’entretien, la maintenance et l’installation de vos équipements frigorifiques, climatiques et équipements CHR.</p><div class="hero-actions"><a class="btn orange" href="tel:+33616056614">📞 URGENCE DÉPANNAGE 7/7j</a><a class="btn" href="#contact">Contact & Infos</a></div><div class="quick"><div>Dépannage toutes marques</div><div>Intervention sous 24/48h</div><div>Une totale transparence au juste prix</div></div></div><div class="hero-card"><img src="logo-chaudfroid-cie.png" alt="ChaudFroid & Cie"></div></div></section>
-    <section id="services"><div class="container"><div class="section-title"><h2>Nos domaines d’intervention</h2></div><div class="cards"><article class="card"><div class="icon">❄️</div><h3>Froid commercial</h3><p>
-- Chambres froides<br>
-- Vitrines réfrigérées<br>
-- Armoires positives et négatives<br>
-- Machines à glace (Taylor, Carpigiani)<br>
-- Refroidisseurs<br>
-- Équipements frigorifiques divers
-</p></article><article class="card"><div class="icon">🍃</div><h3>Climatisation & Pompe à chaleur</h3><p>
-- Installation et mise en service<br>
-- Pompes à chaleur air/eau<br>
-- Climatisation air/air <br>
-- Entretien & maintenance périodique<br>
-- Dépannage et réparation<br>
-- Désembouage de réseaux hydrauliques
-</p></article><article class="card"><div class="icon">🍽️</div><h3>Cuisines professionnelles</h3><p>
-- Fours professionnels<br>
-- Friteuses<br>
-- Grills et plaques de cuisson<br>
-- Pianos de cuisson<br>
-- Lave-vaisselles professionnels<br>
-- Équipements CHR
-</p></article></div></div></section>
-    <section id="marques">
-  <div class="container">
-    <div class="brands-banner">
-      <img src="marques.png" alt="Marques dépannées par ChaudFroid & Cie">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#accueil" aria-label="ChaudFroid & Cie - accueil">
+        <img src="logo-chaudfroid-cie.png" alt="Logo ChaudFroid & Cie" width="1000" height="1000">
+      </a>
+      <a class="btn orange" href="tel:+33616056614">Urgence dépannage 7/7j</a>
+      <nav class="menu" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#interventions">Interventions</a>
+        <a href="#zone">Secteurs</a>
+        <a class="btn" href="tel:+33616056614">Appeler</a>
+      </nav>
     </div>
-  </div>
-</section>
-    <section id="interventions" class="band"><div class="container split"><div><p>Nous intervenons pour assurer la continuité de votre activité, limiter les pannes et prolonger la durée de vie de vos équipements.</p><div class="list"><span><b>✓</b> Diagnostic de panne et recherche de défaut</span><span><b>✓</b> Remise en service et remplacement de pièces</span><span><b>✓</b> Large stock de pièces embarquées pour dépanner en une seule intervention</span><span><b>✓</b> Entretien préventif et maintenance régulière</span><span><b>✓</b> Installation et mise en service conforme d’équipements</span></div></div><div class="zone"><h2>Pour qui ?</h2><p>Restaurants, snacks, commerces alimentaires, boulangeries, collectivités, bureaux, petits commerces et particuliers.</p><p><strong>Objectif :</strong> un service clair, réactif et professionnel, avec des solutions adaptées à votre matériel et à votre budget.</p></div></div></section>
-    <section id="zone"><div class="container"><div class="section-title"><h2>Zone d’intervention</h2><p>Basés dans la Manche à Gavray-sur-Sienne, nous intervenons sur tout le département Sud-Manche ainsi que dans le Calvados et zones limitrophes.</p><div class="cities"><span>Granville</span><span>Vire</span><span>Villedieu-les-Poêles-Rouffigny</span><span>Saint-Lô</span><span>Coutances</span><span>Avranches</span><span>Bayeux</span><span>Caen</span><span>Saint-Hilaire-du-Harcouët</span><span>Mortain</span><span>Flers</span></div></div></div></section>
-    <section id="contact"><div class="container"><div class="contact"><div><h2>Pour toute demande d'intervention, conseil ou devis, n'hésitez pas à nous contacter.</h2><p>Nous vous répondrons dans les plus brefs délais.</p><div class="hero-actions"><a class="btn orange" href="tel:+33616056614">Nous appeler</a><a class="btn" href="mailto:contact@chaudfroid-cie.fr">Demander un devis</a></div></div><div class="contact-box"><img src="logo-chaudfroid-cie.png" alt="ChaudFroid & Cie" class="contact-logo"><a href="tel:+33616056614">☎ 06 16 05 66 14</a><a href="mailto:contact@chaudfroid-cie.fr">✉ contact@chaudfroid-cie.fr</a><p style="font-size:.92rem;color:#617083">« TVA non applicable, article 293 B du Code général des impôts (CGI) »</p></div></div></div></section>
+  </header>
+
+  <main id="accueil">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Votre spécialiste du froid, de la climatisation et des cuisines professionnelles dans la Manche</h1>
+          <p class="lead">Nous accompagnons les professionnels, collectivités et particuliers pour le dépannage, l'entretien, la maintenance et l'installation de vos équipements frigorifiques, climatiques et équipements CHR.</p>
+          <div class="hero-actions">
+            <a class="btn orange" href="tel:+33616056614">Urgence dépannage 7/7j</a>
+            <a class="btn" href="#contact">Contact & infos</a>
+          </div>
+          <div class="quick">
+            <div>Dépannage toutes marques</div>
+            <div>Intervention sous 24/48h</div>
+            <div>Transparence au juste prix</div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="logo-chaudfroid-cie.png" alt="ChaudFroid & Cie" width="1000" height="1000">
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nos domaines d'intervention</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">❄</div>
+            <h3>Froid commercial</h3>
+            <p>Chambres froides<br>Vitrines réfrigérées<br>Armoires positives et négatives<br>Machines à glace (Taylor, Carpigiani)<br>Refroidisseurs<br>Équipements frigorifiques divers</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">◆</div>
+            <h3>Climatisation & pompe à chaleur</h3>
+            <p>Installation et mise en service<br>Pompes à chaleur air/eau<br>Climatisation air/air<br>Entretien & maintenance périodique<br>Dépannage et réparation<br>Désembouage de réseaux hydrauliques</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">✓</div>
+            <h3>Cuisines professionnelles</h3>
+            <p>Fours professionnels<br>Friteuses<br>Grills et plaques de cuisson<br>Pianos de cuisson<br>Lave-vaisselles professionnels<br>Équipements CHR</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="marques">
+      <div class="container">
+        <div class="brands-banner">
+          <img src="marques.png" alt="Marques dépannées par ChaudFroid & Cie" width="1821" height="864" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="interventions" class="band">
+      <div class="container split">
+        <div>
+          <p>Nous intervenons pour assurer la continuité de votre activité, limiter les pannes et prolonger la durée de vie de vos équipements.</p>
+          <div class="list">
+            <span><b>✓</b> Diagnostic de panne et recherche de défaut</span>
+            <span><b>✓</b> Remise en service et remplacement de pièces</span>
+            <span><b>✓</b> Large stock de pièces embarquées pour dépanner en une seule intervention</span>
+            <span><b>✓</b> Entretien préventif et maintenance régulière</span>
+            <span><b>✓</b> Installation et mise en service conforme d'équipements</span>
+          </div>
+        </div>
+        <div class="zone-card">
+          <h2>Pour qui ?</h2>
+          <p>Restaurants, snacks, commerces alimentaires, boulangeries, collectivités, bureaux, petits commerces et particuliers.</p>
+          <p><strong>Objectif :</strong> un service clair, réactif et professionnel, avec des solutions adaptées à votre matériel et à votre budget.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="zone">
+      <div class="container">
+        <div class="section-title">
+          <h2>Zone d'intervention</h2>
+          <p>Basés dans la Manche à Gavray-sur-Sienne, nous intervenons sur tout le département Sud-Manche ainsi que dans le Calvados et les zones limitrophes.</p>
+          <div class="cities">
+            <span>Granville</span>
+            <span>Vire</span>
+            <span>Villedieu-les-Poêles-Rouffigny</span>
+            <span>Saint-Lô</span>
+            <span>Coutances</span>
+            <span>Avranches</span>
+            <span>Bayeux</span>
+            <span>Caen</span>
+            <span>Saint-Hilaire-du-Harcouët</span>
+            <span>Mortain</span>
+            <span>Flers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2>Pour toute demande d'intervention, conseil ou devis, n'hésitez pas à nous contacter.</h2>
+            <p>Nous vous répondrons dans les plus brefs délais.</p>
+            <div class="hero-actions">
+              <a class="btn orange" href="tel:+33616056614">Nous appeler</a>
+              <a class="btn" href="mailto:contact@chaudfroid-cie.fr">Demander un devis</a>
+            </div>
+          </div>
+          <div class="contact-box">
+            <img src="logo-chaudfroid-cie.png" alt="ChaudFroid & Cie" class="contact-logo" width="1000" height="1000" loading="lazy">
+            <a href="tel:+33616056614">06 16 05 66 14</a>
+            <a href="mailto:contact@chaudfroid-cie.fr">contact@chaudfroid-cie.fr</a>
+            <p class="legal">« TVA non applicable, article 293 B du Code général des impôts (CGI) »</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><div class="container"><b>ChaudFroid et Compagnie
-    Entreprise individuelle</b>
-    Siret 84070666700028 - Code APE 4322B<br>© 2026 ChaudFroid & Cie. Tous droits réservés.</div></footer>
+
+  <footer>
+    <div class="container">
+      <b>ChaudFroid et Compagnie - Entreprise individuelle</b><br>
+      Siret 84070666700028 - Code APE 4322B<br>
+      © 2026 ChaudFroid & Cie. Tous droits réservés.
+    </div>
+  </footer>
 </body>
 </html>
