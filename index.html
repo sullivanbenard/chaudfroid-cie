@@ -163,6 +163,8 @@
       line-height:1.05;
       letter-spacing:0;
     }
+    .hero-title-line{display:inline}
+    .hero-title-line::after{content:" "}
     .lead{
       max-width:720px;
       margin:20px 0 0;
@@ -703,7 +705,35 @@
         grid-template-columns:1fr;
       }
       .hero-card{display:none}
-      h1{font-size:clamp(2.05rem,9vw,3.1rem)}
+      h1{
+        position:relative;
+        max-width:100%;
+        padding:16px 0 18px;
+        font-size:clamp(2.18rem,10.1vw,3.18rem);
+        line-height:.98;
+        text-align:left;
+        text-shadow:0 4px 18px rgba(0,0,0,.56);
+      }
+      h1::before{
+        content:"";
+        position:absolute;
+        left:0;
+        top:0;
+        bottom:0;
+        width:5px;
+        border-radius:999px;
+        background:linear-gradient(180deg,var(--orange),var(--blue));
+        box-shadow:0 0 24px rgba(255,138,52,.34);
+      }
+      .hero-title-line{
+        display:block;
+        padding-left:18px;
+      }
+      .hero-title-line::after{content:""}
+      .hero-title-line.accent{
+        color:#fff;
+        text-shadow:0 0 22px rgba(0,162,255,.32),0 4px 18px rgba(0,0,0,.6);
+      }
       .lead{font-size:1.05rem}
       .hero-actions{display:grid;grid-template-columns:1fr}
       .btn{width:100%}
@@ -781,7 +811,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1>Votre spécialiste du froid, de la climatisation et des cuisines professionnelles dans la Manche</h1>
+          <h1><span class="hero-title-line">Votre spécialiste</span><span class="hero-title-line">du froid, de la</span><span class="hero-title-line accent">climatisation</span><span class="hero-title-line">et des cuisines</span><span class="hero-title-line">professionnelles</span><span class="hero-title-line accent">dans la Manche</span></h1>
           <p class="lead">Nous accompagnons les professionnels, collectivités et particuliers pour le dépannage, l'entretien, la maintenance et l'installation de vos équipements frigorifiques, climatiques et équipements CHR.</p>
           <div class="hero-actions">
             <a class="btn orange" href="tel:+33616056614">Urgence dépannage 7/7j</a>
