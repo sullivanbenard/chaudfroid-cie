@@ -502,19 +502,38 @@
     }
     .zone-card strong{color:white}
     .audience-tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:20px 0 22px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+      margin:18px 0 20px;
     }
     .audience-tags span{
-      padding:8px 12px;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      min-height:32px;
+      padding:7px 9px;
       border:1px solid rgba(255,255,255,.16);
-      border-radius:999px;
+      border-radius:12px;
       background:rgba(255,255,255,.08);
       color:#eef7ff;
       font-weight:800;
-      font-size:.92rem;
+      font-size:.82rem;
+      line-height:1.15;
+    }
+    .audience-tags span::before{
+      content:"✓";
+      width:18px;
+      height:18px;
+      flex:0 0 18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--orange),#ffba62);
+      color:#1a120a;
+      font-size:.72rem;
+      font-weight:900;
     }
     .objective-box{
       border:1px solid rgba(255,255,255,.14);
@@ -834,15 +853,18 @@
       }
       .zone-card{border-radius:20px}
       .zone-card p{font-size:1rem}
+      .zone-card h2{margin-bottom:10px}
       .audience-tags{
-        gap:8px;
-        margin:16px 0 18px;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:7px;
+        margin:12px 0 14px;
       }
       .audience-tags span{
-        padding:7px 10px;
-        font-size:.86rem;
+        min-height:30px;
+        padding:7px 8px;
+        font-size:.78rem;
       }
-      .objective-box{padding:14px 15px}
+      .objective-box{padding:12px 14px}
       .zone-layout{
         grid-template-columns:1fr;
         gap:24px;
@@ -982,10 +1004,18 @@
           <p>Des solutions adaptées aux contraintes du terrain, de l'urgence ponctuelle à la maintenance régulière.</p>
           <div class="audience-tags">
             <span>Restaurants</span>
-            <span>Commerces alimentaires</span>
+            <span>Brasseries</span>
+            <span>Pizzerias</span>
+            <span>Cafés</span>
+            <span>Poissonneries</span>
+            <span>Boucheries</span>
             <span>Boulangeries</span>
-            <span>Collectivités</span>
+            <span>Supermarchés</span>
+            <span>Commerces alimentaires</span>
             <span>Bureaux</span>
+            <span>Snacks</span>
+            <span>Hôtels</span>
+            <span>Collectivités</span>
             <span>Particuliers</span>
           </div>
           <div class="objective-box">
