@@ -163,8 +163,44 @@
       line-height:1.05;
       letter-spacing:0;
     }
-    .hero-title-line{display:inline}
-    .hero-title-line::after{content:" "}
+    .hero-title-line{display:block}
+    .hero-title-line::after{content:""}
+    @media (min-width:851px){
+      h1{
+        position:relative;
+        padding-left:18px;
+      }
+      h1::before{
+        content:"";
+        position:absolute;
+        left:0;
+        top:7px;
+        bottom:7px;
+        width:5px;
+        border-radius:999px;
+        background:linear-gradient(180deg,var(--orange),var(--blue));
+        box-shadow:0 0 24px rgba(255,138,52,.26);
+      }
+      .hero-title-line{
+        position:relative;
+        padding:3px 0 8px;
+        border-bottom:1px solid rgba(255,255,255,.16);
+        text-shadow:0 4px 20px rgba(0,0,0,.56);
+      }
+      .hero-title-line::after{
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width:112px;
+        height:2px;
+        border-radius:999px;
+        background:linear-gradient(90deg,var(--orange),transparent);
+      }
+      .hero-title-line:nth-child(2)::after{background:linear-gradient(90deg,var(--blue),transparent)}
+      .hero-title-line:last-child{border-bottom:0}
+      .hero-title-line:last-child::after{display:none}
+    }
     .lead{
       max-width:720px;
       margin:20px 0 0;
@@ -197,17 +233,33 @@
     .hero .hero-actions .btn.orange::before{content:"!"}
     .hero .hero-actions .btn:not(.orange)::before{content:"▤"}
     .hero-card{
+      position:relative;
       padding:24px;
-      border:1px solid rgba(255,255,255,.16);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
       text-align:center;
     }
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:50%;
+      width:360px;
+      height:360px;
+      transform:translate(-50%,-50%);
+      border-radius:999px;
+      background:radial-gradient(circle,rgba(255,138,52,.22),rgba(0,162,255,.12) 42%,transparent 70%);
+      filter:blur(4px);
+      pointer-events:none;
+    }
     .hero-card img{
-      width:min(300px,100%);
+      position:relative;
+      z-index:1;
+      width:min(340px,100%);
       display:block;
       margin:auto;
+      filter:
+        drop-shadow(0 0 1px rgba(255,255,255,.95))
+        drop-shadow(0 0 6px rgba(255,255,255,.5))
+        drop-shadow(0 18px 32px rgba(0,0,0,.36));
     }
     .quick{
       width:min(680px,100%);
@@ -794,11 +846,16 @@
       h1{
         position:relative;
         max-width:100%;
-        padding:16px 0 18px;
-        font-size:clamp(2.18rem,10.1vw,3.18rem);
-        line-height:.98;
+        display:block;
+        padding:12px 0 14px;
+        font-size:clamp(2rem,9vw,2.82rem);
+        line-height:1.02;
         text-align:left;
-        text-shadow:0 4px 18px rgba(0,0,0,.56);
+        text-shadow:
+          0 2px 0 rgba(0,0,0,.55),
+          0 8px 24px rgba(0,0,0,.68),
+          0 0 18px rgba(0,162,255,.2);
+        -webkit-text-stroke:1px rgba(255,255,255,.22);
       }
       h1::before{
         content:"";
@@ -812,10 +869,37 @@
         box-shadow:0 0 24px rgba(255,138,52,.34);
       }
       .hero-title-line{
+        position:relative;
         display:block;
-        padding-left:18px;
+        padding:4px 0 7px 18px;
+        border-bottom:1px solid rgba(255,255,255,.18);
       }
-      .hero-title-line::after{content:""}
+      .hero-title-line::after{
+        content:"";
+        position:absolute;
+        left:18px;
+        bottom:-1px;
+        width:74px;
+        height:2px;
+        border-radius:999px;
+        background:linear-gradient(90deg,var(--orange),transparent);
+      }
+      .hero-title-line:nth-child(2)::after{background:linear-gradient(90deg,var(--blue),transparent)}
+      .hero-title-line:last-child{border-bottom:0}
+      .hero-title-line:last-child::after{display:none}
+      .hero-title-line::before{
+        content:"";
+        position:absolute;
+        left:0;
+        top:.42em;
+        width:9px;
+        height:9px;
+        border-radius:999px;
+        background:var(--orange);
+        box-shadow:0 0 18px rgba(255,138,52,.65);
+      }
+      .hero-title-line:nth-child(2)::before{background:var(--blue);box-shadow:0 0 18px rgba(0,162,255,.65)}
+      .hero-title-line:nth-child(3)::before{background:linear-gradient(135deg,var(--blue),var(--orange))}
       .hero-title-line.accent{
         color:#fff;
         text-shadow:0 0 22px rgba(0,162,255,.32),0 4px 18px rgba(0,0,0,.6);
@@ -916,7 +1000,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1><span class="hero-title-line">Votre spécialiste</span><span class="hero-title-line">du froid, de la</span><span class="hero-title-line accent">climatisation</span><span class="hero-title-line">et des cuisines</span><span class="hero-title-line">professionnelles</span><span class="hero-title-line accent">dans la Manche</span></h1>
+          <h1><span class="hero-title-line">Réfrigération commerciale</span><span class="hero-title-line accent">Génie climatique</span><span class="hero-title-line">Cuisines professionnelles</span></h1>
           <p class="lead">Nous accompagnons les professionnels, collectivités et particuliers pour le dépannage, l'entretien, la maintenance et l'installation de vos équipements frigorifiques, climatiques et équipements CHR.</p>
           <div class="hero-actions">
             <a class="btn orange" href="tel:+33616056614">Urgence dépannage 7/7j</a>
