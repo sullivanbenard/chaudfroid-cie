@@ -619,7 +619,7 @@
       border-color:rgba(0,113,188,.25);
       box-shadow:0 16px 36px rgba(7,17,31,.09);
     }
-    .list b{
+    .list .list-icon{
       width:34px;
       height:34px;
       flex:0 0 34px;
@@ -630,8 +630,25 @@
       background:linear-gradient(135deg,var(--blue),#35c0ff);
       color:white;
       box-shadow:0 10px 20px rgba(0,113,188,.22);
-      font-size:1rem;
-      line-height:1;
+    }
+    .list .list-icon svg{
+      width:20px;
+      height:20px;
+      display:block;
+      stroke:currentColor;
+      stroke-width:2.2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      fill:none;
+    }
+    .list .list-icon.parts{
+      background:linear-gradient(135deg,var(--orange),#ffc05c);
+      color:#1d140b;
+      box-shadow:0 10px 20px rgba(255,138,52,.22);
+    }
+    .list .list-icon.maint{
+      background:linear-gradient(135deg,#168b65,#79d9ae);
+      box-shadow:0 10px 20px rgba(22,139,101,.2);
     }
     .zone-card{
       position:relative;
@@ -1240,11 +1257,11 @@
         <div>
           <p class="intervention-intro">Nous intervenons pour assurer la continuité de votre activité, limiter les pannes et prolonger la durée de vie de vos équipements.</p>
           <div class="list">
-            <span><b>✓</b> Diagnostic de panne et recherche de défaut</span>
-            <span><b>✓</b> Remise en service et remplacement de pièces</span>
-            <span><b>✓</b> Large stock de pièces embarquées pour dépanner en une seule intervention</span>
-            <span><b>✓</b> Entretien préventif et maintenance régulière</span>
-            <span><b>✓</b> Installation et mise en service conforme d'équipements</span>
+            <span><i class="list-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4 4M10.5 7.5v3.5l2.5 1.5"/></svg></i> Diagnostic de panne et recherche de défaut</span>
+            <span><i class="list-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a5 5 0 0 0-6.6 6.6L4 17v3h3l3.9-3.9a5 5 0 0 0 6.6-6.6l-3.2 3.2-3-3z"/></svg></i> Remise en service et remplacement de pièces</span>
+            <span><i class="list-icon parts" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8.5 12 4l8 4.5-8 4.5z"/><path d="M4 8.5V16l8 4 8-4V8.5M12 13v7"/></svg></i> Large stock de pièces embarquées pour dépanner en une seule intervention</span>
+            <span><i class="list-icon maint" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M8.5 15l2 2 4.5-5"/></svg></i> Entretien préventif et maintenance régulière</span>
+            <span><i class="list-icon parts" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 20h12M8 20V9l4-5 4 5v11M9 9h6M10 14h4"/></svg></i> Installation et mise en service conforme d'équipements</span>
           </div>
         </div>
         <div class="zone-card">
