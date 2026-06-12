@@ -435,11 +435,8 @@
       overflow:hidden;
       border:1px solid rgba(0,113,188,.14);
       border-radius:var(--radius);
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
-        radial-gradient(circle at 18% 0,rgba(0,113,188,.14),transparent 34%);
+      background:#fff;
       box-shadow:0 18px 42px rgba(7,17,31,.08);
-      padding:28px;
       transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
     }
     .card::before{
@@ -453,7 +450,7 @@
       content:"";
       position:absolute;
       right:-44px;
-      top:-44px;
+      top:150px;
       width:132px;
       height:132px;
       border-radius:999px;
@@ -466,19 +463,57 @@
       box-shadow:0 24px 56px rgba(7,17,31,.13);
     }
     .card.cold{
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
-        radial-gradient(circle at 18% 0,rgba(0,162,255,.18),transparent 34%);
+      background:#fff;
     }
     .card.climate{
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
-        radial-gradient(circle at 18% 0,rgba(52,199,133,.16),transparent 34%);
+      background:#fff;
     }
     .card.kitchen{
+      background:#fff;
+    }
+    .service-photo{
+      position:relative;
+      height:220px;
+      overflow:hidden;
+      background:#08213d;
+    }
+    .service-photo::before,
+    .service-photo::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+    }
+    .service-photo::before{
       background:
-        linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.9)),
-        radial-gradient(circle at 18% 0,rgba(255,138,52,.18),transparent 34%);
+        linear-gradient(180deg,rgba(5,16,31,0) 46%,rgba(5,16,31,.22) 74%,rgba(7,17,31,.6)),
+        linear-gradient(105deg,rgba(0,113,188,.12),rgba(255,138,52,.14));
+    }
+    .service-photo::after{
+      inset:auto 0 0;
+      height:38%;
+      background:linear-gradient(180deg,rgba(0,59,108,0),rgba(0,113,188,.28) 48%,rgba(255,138,52,.16));
+    }
+    .service-photo img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      transform:scale(1.01);
+      transition:transform .35s ease;
+    }
+    .card:hover .service-photo img{
+      transform:scale(1.055);
+    }
+    .service-content{
+      position:relative;
+      z-index:1;
+      min-height:300px;
+      padding:24px 28px 28px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.97),rgba(255,255,255,.92)),
+        radial-gradient(circle at 12% 0,rgba(0,113,188,.12),transparent 38%);
     }
     .icon{
       position:relative;
@@ -495,6 +530,8 @@
         linear-gradient(135deg,rgba(0,113,188,.13),rgba(255,138,52,.12));
       box-shadow:0 12px 28px rgba(7,17,31,.08), inset 0 1px 0 rgba(255,255,255,.9);
       color:var(--blue);
+      margin-top:-58px;
+      backdrop-filter:blur(12px);
     }
     .icon svg{
       width:38px;
@@ -1024,7 +1061,17 @@
       section{padding:42px 0}
       .cards{grid-template-columns:1fr}
       .card:last-child{grid-column:auto}
-      .card,.zone-card{padding:20px}
+      .zone-card{padding:20px}
+      .service-photo{height:190px}
+      .service-content{
+        min-height:auto;
+        padding:22px 22px 24px;
+      }
+      .icon{
+        width:62px;
+        height:62px;
+        margin-bottom:14px;
+      }
       #interventions{padding:46px 0}
       .intervention-intro{font-size:1.04rem}
       .list span{
@@ -1121,39 +1168,54 @@
         </div>
         <div class="cards">
           <article class="card cold">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48">
-                <path d="M24 6v36M10 14l28 20M38 14 10 34"/>
-                <path d="m18 9 6 6 6-6M18 39l6-6 6 6M7 24h34"/>
-                <path d="m11 18 8 2-2-8M37 30l-8-2 2 8M37 18l-8 2 2-8M11 30l8-2-2 8"/>
-              </svg>
+            <div class="service-photo">
+              <img src="service-froid.webp" alt="Chambre froide et équipements de froid commercial" width="1200" height="800" loading="lazy">
             </div>
-            <h3>Froid commercial</h3>
-            <p>Chambres froides<br>Vitrines réfrigérées<br>Armoires positives et négatives<br>Machines à glace (Taylor, Carpigiani)<br>Machines à glaçons<br>Équipements frigorifiques divers<br>Recharge climatisation automobile à domicile</p>
+            <div class="service-content">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M24 6v36M10 14l28 20M38 14 10 34"/>
+                  <path d="m18 9 6 6 6-6M18 39l6-6 6 6M7 24h34"/>
+                  <path d="m11 18 8 2-2-8M37 30l-8-2 2 8M37 18l-8 2 2-8M11 30l8-2-2 8"/>
+                </svg>
+              </div>
+              <h3>Froid commercial</h3>
+              <p>Chambres froides<br>Vitrines réfrigérées<br>Armoires positives et négatives<br>Machines à glace (Taylor, Carpigiani)<br>Refroidisseurs<br>Équipements frigorifiques divers<br>Recharge climatisation automobile à domicile</p>
+            </div>
           </article>
           <article class="card climate">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48">
-                <path d="M9 20c5-5 12-5 17 0 4 4 9 4 13 0"/>
-                <path d="M7 29c6-4 12-4 18 0 5 3 10 3 16-1"/>
-                <path d="M30 8h8v8M38 8 27 19"/>
-                <path d="M12 39h9M16.5 34.5v9"/>
-              </svg>
+            <div class="service-photo">
+              <img src="service-climatisation.webp" alt="Pompes à chaleur et groupes de climatisation professionnels" width="1200" height="800" loading="lazy">
             </div>
-            <h3>Climatisation & pompe à chaleur</h3>
-            <p>Installation et mise en service<br>Pompes à chaleur air/eau<br>Climatisation air/air<br>Entretien & maintenance périodique<br>Dépannage et réparation<br>Désembouage de réseaux hydrauliques</p>
+            <div class="service-content">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M9 20c5-5 12-5 17 0 4 4 9 4 13 0"/>
+                  <path d="M7 29c6-4 12-4 18 0 5 3 10 3 16-1"/>
+                  <path d="M30 8h8v8M38 8 27 19"/>
+                  <path d="M12 39h9M16.5 34.5v9"/>
+                </svg>
+              </div>
+              <h3>Climatisation & pompe à chaleur</h3>
+              <p>Installation et mise en service<br>Pompes à chaleur air/eau<br>Climatisation air/air<br>Entretien & maintenance périodique<br>Dépannage et réparation<br>Désembouage de réseaux hydrauliques</p>
+            </div>
           </article>
           <article class="card kitchen">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48">
-                <path d="M14 41V19M14 19c-5-3-5-10 0-12 4-2 7 1 8 4 1-3 4-6 8-4 5 2 5 9 0 12v22"/>
-                <path d="M14 20h16"/>
-                <path d="M36 8v33M40 8v12c0 3-2 5-4 5s-4-2-4-5V8"/>
-                <path class="filled" d="M19 28h6v6h-6z"/>
-              </svg>
+            <div class="service-photo">
+              <img src="service-cuisines.webp" alt="Four et équipements de cuisine professionnelle" width="1200" height="800" loading="lazy">
             </div>
-            <h3>Cuisines professionnelles</h3>
-            <p>Fours professionnels<br>Friteuses<br>Grills et plaques de cuisson<br>Pianos de cuisson<br>Lave-vaisselles professionnels<br>Équipements CHR</p>
+            <div class="service-content">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M14 41V19M14 19c-5-3-5-10 0-12 4-2 7 1 8 4 1-3 4-6 8-4 5 2 5 9 0 12v22"/>
+                  <path d="M14 20h16"/>
+                  <path d="M36 8v33M40 8v12c0 3-2 5-4 5s-4-2-4-5V8"/>
+                  <path class="filled" d="M19 28h6v6h-6z"/>
+                </svg>
+              </div>
+              <h3>Cuisines professionnelles</h3>
+              <p>Fours professionnels<br>Friteuses<br>Grills et plaques de cuisson<br>Pianos de cuisson<br>Lave-vaisselles professionnels<br>Équipements CHR</p>
+            </div>
           </article>
         </div>
       </div>
